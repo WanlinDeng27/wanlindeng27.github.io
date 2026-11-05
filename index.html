@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wanlin Deng | Venture Investing & Financial Economics</title>
+<meta name="description" content="Wanlin Deng: MS Financial Economics candidate at Columbia Business School with venture investing, research, and data experience.">
+<style>
+:root{
+  --bg:#f6f9fc; --surface:#ffffff; --surface-2:#eaf3fa;
+  --ink:#0b2545; --muted:#4a607a; --line:#d5e3ef;
+  --columbia:#75aadb; --columbia-soft:#b9d9eb; --accent:#1d5c9e; --accent-ink:#ffffff;
+  --shadow:0 1px 2px rgba(11,37,69,.06),0 8px 24px rgba(11,37,69,.06);
+  --serif:"Source Serif 4","Iowan Old Style","Palatino Linotype",Georgia,serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0a1626; --surface:#102239; --surface-2:#14304f;
+    --ink:#e8f1f9; --muted:#9db4cb; --line:#223c5a;
+    --columbia:#75aadb; --columbia-soft:#2a5078; --accent:#8cc0ea; --accent-ink:#0a1626;
+    --shadow:none;
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:3px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--columbia);outline-offset:2px;border-radius:6px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--serif);line-height:1.2;margin:0}
+.skip{position:absolute;left:-999px;top:8px;background:var(--surface);padding:8px 12px;border-radius:6px;z-index:100}
+.skip:focus{left:8px}
+
+/* Nav */
+header.nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;gap:16px;height:60px}
+.brand{font-family:var(--serif);font-weight:600;font-size:1.1rem;color:var(--ink);text-decoration:none;white-space:nowrap}
+.nav ul{display:flex;gap:4px;list-style:none;margin:0 0 0 auto;padding:0;overflow-x:auto;scrollbar-width:none}
+.nav ul::-webkit-scrollbar{display:none}
+.nav li a{display:block;padding:8px 12px;border-radius:999px;color:var(--muted);text-decoration:none;font-size:.92rem;font-weight:500;white-space:nowrap}
+.nav li a:hover{background:var(--surface-2);color:var(--ink)}
+.nav li a.active{background:var(--columbia-soft);color:var(--ink)}
+@media (max-width:640px){.brand{display:none}.nav ul{margin-left:0}}
+
+/* Hero */
+.hero{padding:56px 0 40px;background:linear-gradient(180deg,var(--surface-2),var(--bg))}
+.hero .wrap{display:grid;grid-template-columns:1fr 280px;gap:48px;align-items:center}
+.eyebrow{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600;margin:0 0 12px}
+.hero h1{font-size:clamp(2.2rem,5vw,3.4rem);margin-bottom:14px}
+.lede{font-size:1.15rem;color:var(--muted);max-width:56ch;margin:0 0 24px}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:8px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;border-radius:999px;font-weight:600;font-size:.95rem;text-decoration:none;border:1px solid var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn.ghost{color:var(--accent);background:transparent}
+.btn:hover{filter:brightness(1.08)}
+.loc{color:var(--muted);font-size:.92rem;margin:14px 0 0}
+.portrait{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:60% 18%;border-radius:20px;border:6px solid var(--surface);box-shadow:var(--shadow)}
+@media (max-width:800px){.hero .wrap{grid-template-columns:1fr;gap:28px}.portrait{max-width:240px;order:-1}}
+
+/* Sections */
+section{padding:48px 0}
+.sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:24px}
+.sec-head h2{font-size:1.7rem}
+.sec-head .rule{flex:1;height:1px;background:var(--line)}
+
+/* Tiles */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:8px}
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px 20px;box-shadow:var(--shadow)}
+.tile b{display:block;font-family:var(--serif);font-size:1.9rem;color:var(--accent);line-height:1.1}
+.tile span{color:var(--muted);font-size:.9rem}
+.jump{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px}
+.jump a{display:block;text-decoration:none;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px 20px;box-shadow:var(--shadow);transition:transform .15s,border-color .15s}
+.jump a:hover{transform:translateY(-2px);border-color:var(--columbia)}
+.jump small{display:block;color:var(--muted);margin-top:4px;font-size:.85rem}
+.jump strong{font-family:var(--serif);font-size:1.15rem}
+
+/* Cards */
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:var(--shadow)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:18px}
+.row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:baseline}
+.card h3{font-size:1.25rem}
+.where{color:var(--muted);font-size:.92rem;text-align:right}
+.role{font-weight:600;margin:4px 0 0}
+.blurb{color:var(--muted);font-style:italic;margin:6px 0 0;font-size:.95rem}
+.card ul{margin:14px 0 0;padding-left:20px}
+.card li{margin:8px 0}
+.card li::marker{color:var(--columbia)}
+.meta{display:inline-block;margin-top:10px;font-size:.85rem;color:var(--muted)}
+.chip{display:inline-block;background:var(--surface-2);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:4px 12px;font-size:.85rem;margin:4px 6px 0 0}
+.tag{display:inline-block;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;font-weight:600;color:var(--accent);background:var(--surface-2);padding:3px 10px;border-radius:999px;margin-bottom:10px}
+.stack{display:grid;gap:18px}
+
+/* Timeline for experience */
+.timeline{position:relative;display:grid;gap:18px;padding-left:28px}
+.timeline::before{content:"";position:absolute;left:8px;top:6px;bottom:6px;width:2px;background:var(--columbia-soft)}
+.timeline .card{position:relative}
+.timeline .card::before{content:"";position:absolute;left:-27px;top:30px;width:12px;height:12px;border-radius:50%;background:var(--columbia);border:3px solid var(--bg)}
+
+footer{border-top:1px solid var(--line);padding:32px 0 48px;color:var(--muted);font-size:.9rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">Wanlin Deng</a>
+    <nav aria-label="Primary">
+      <ul id="navlinks">
+        <li><a href="#top">Home</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="hero" id="top">
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Columbia Business School · MS Financial Economics</p>
+        <h1>Wanlin Deng</h1>
+        <p class="lede">Economics graduate (summa cum laude, Duke Kunshan / Duke) now studying financial economics at Columbia Business School. I combine venture investing, empirical research, and data tools to evaluate early-stage companies and emerging markets.</p>
+        <div class="cta">
+          <a class="btn primary" href="https://www.linkedin.com/in/wanlin-deng/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn ghost" href="https://github.com/wanlindeng" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn ghost" href="#experience">See experience</a>
+        </div>
+        <p class="loc">New York, NY · open to relocation</p>
+      </div>
+      <img class="portrait" src="assets/profile.jpg" alt="Portrait of Wanlin Deng at Duke Kunshan University graduation" width="720" height="900">
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="stats" aria-label="Highlights">
+      <div class="tile"><b>$25K</b><span>Grant awarded after my due diligence memo and recommendation</span></div>
+      <div class="tile"><b>$3.8B</b><span>Fragmented market sized for an Investment Committee thesis</span></div>
+      <div class="tile"><b>150+</b><span>Founders and investors met to build a sourcing pipeline</span></div>
+      <div class="tile"><b>60K+</b><span>Patents clustered into 176 technology areas</span></div>
+    </div>
+  </div>
+
+  <section aria-label="Quick navigation" style="padding-top:32px;padding-bottom:8px">
+    <div class="wrap">
+      <div class="jump">
+        <a href="#education"><strong>Education</strong><small>Columbia, Duke Kunshan, Duke</small></a>
+        <a href="#experience"><strong>Experience</strong><small>Venture, research, analytics</small></a>
+        <a href="#projects"><strong>Investment projects</strong><small>La Mesa, Tamer Fund</small></a>
+        <a href="#skills"><strong>Skills</strong><small>Python, SQL, modeling</small></a>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap">
+      <div class="sec-head"><h2>Education</h2><span class="rule"></span></div>
+      <div class="grid2">
+        <article class="card">
+          <div class="row"><h3>Columbia Business School</h3><span class="where">New York, NY · 2025–2027</span></div>
+          <p class="role">MS, Financial Economics, May 2027</p>
+          <p class="meta"><strong>Related coursework</strong></p><br>
+          <span class="chip">Investment and Financial Statement Analysis</span>
+          <span class="chip">Venture Capital</span>
+          <span class="chip">Corporate Valuation</span>
+          <span class="chip">Capital Markets</span>
+        </article>
+        <article class="card">
+          <div class="row"><h3>Duke Kunshan University / Duke University</h3><span class="where">Suzhou, China &amp; Durham, NC · 2021–2025</span></div>
+          <p class="role">BEcon &amp; BA (Dual Degree), Economics, May 2025</p>
+          <p class="meta"><strong>Honors</strong></p><br>
+          <span class="chip">Summa cum laude</span>
+          <span class="chip">Dean’s List with Distinction (all semesters)</span>
+          <span class="chip">National Encouragement Scholarship</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <div class="sec-head"><h2>Experience</h2><span class="rule"></span></div>
+      <div class="timeline">
+
+        <article class="card">
+          <div class="row"><h3>Niterra Ventures (Niterra North America, Inc.)</h3><span class="where">Santa Clara, CA · Summer 2026</span></div>
+          <p class="role">Venture Investment Intern</p>
+          <p class="blurb">Corporate venture capital arm of Niterra, investing in semiconductors, robotics, automotive, and healthcare technologies</p>
+          <ul>
+            <li>Developed and presented a supply chain traceability investment thesis to the Investment Committee and Niterra headquarters, identifying strategic whitespace in a fragmented $3.8B market and sizing $80M in annual value potential across 4 value pools; proposed a 2-phase market-entry strategy that informed future investment discussions.</li>
+            <li>Built a sourcing pipeline by connecting with 150+ founders and investors at Silicon Valley pitch events; sourced 5 opportunities in AI infra and ceramics, assessing customer traction, market size, and strategic fit, with 2 advancing to deeper diligence.</li>
+            <li>Designed a cap table analysis module for the internal investment dashboard, modeling ownership, option-pool expansion, and new financings to evaluate dilution impact and follow-on investment scenarios, reducing manual scenario-analysis time by 80%.</li>
+            <li>Monitored a portfolio company through financial statement analysis, DCF valuation, and comparable company benchmarking; challenged management’s $500M–$1B exit assumptions and developed a $300M–$400M valuation range.</li>
+            <li>Built an AI patent-mining tool clustering 60K+ patents into 176 technology areas to spot targets before they reach PitchBook; found Niterra present in 8 of the top 10 areas but leading none, and proposed investments and partnerships to close the gap.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="row"><h3>Dewave Ventures</h3><span class="where">Shanghai, China · Summer 2024</span></div>
+          <p class="role">Finance and Investment Analytics Intern</p>
+          <ul>
+            <li>Evaluated io.net (GPU compute network) by analyzing supply-side unit economics and demand-side adoption; found GPU supply growing faster than real demand with low compute utilization, and recommended a cautious stance that the team adopted.</li>
+            <li>Built a Tableau investment dashboard integrating on-chain and financial metrics to support due diligence and monitor user growth, network utilization, and revenue sustainability.</li>
+            <li>Tracked TradFi and DeFi market trends, news flow, equity and token prices, and social sentiment to build an independent view of the sector, which shaped deal screening and the io.net recommendation.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="row"><h3>Center for the Study of Contemporary China</h3><span class="where">Suzhou, China · 2023–2024</span></div>
+          <p class="role">Research Assistant (part-time)</p>
+          <ul>
+            <li>Built a 2.5-year daily dataset of WETH prices and fund flows across 16 exchanges using SQL; constructed a CEX-to-DEX net flow indicator and validated data integrity via Etherscan.</li>
+            <li>Used the FTX collapse as a natural experiment, applying Regression Discontinuity and Difference-in-Differences with gold as control; found significant price declines and capital reallocation from centralized to decentralized exchanges.</li>
+            <li>Combined LLM sentiment scoring with LDA topic modeling and network analysis of Discord communities; showed sentiment metrics missed the shock because holiday discourse masked trust concerns in CEX forums.</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <div class="sec-head"><h2>Investment Projects</h2><span class="rule"></span></div>
+      <div class="grid2">
+
+        <article class="card">
+          <span class="tag">Course project</span>
+          <div class="row"><h3>La Mesa Ventures</h3><span class="where">New York, NY · Fall 2026</span></div>
+          <p class="blurb" style="margin-top:2px">Columbia Business School</p>
+          <p class="role">Investment Team Member</p>
+          <ul>
+            <li>Co-authored a seed investment memo on an Asian-inspired CPG beverage startup, recommending a $700K lead check in a $1.5M priced round at $3.0M pre-money with a board seat, 1x non-participating preference, and pro rata rights.</li>
+            <li>Modeled cap table through Series B, and built return scenarios showing a ~$440M exit was needed to return a $50M fund.</li>
+            <li>Sized the market bottom-up from retail velocity and revenue per account, stress-tested founder projections, and designed diligence on reorder data, co-packer capacity, and founder back-channels.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <span class="tag">Student-run fund</span>
+          <div class="row"><h3>Tamer Fund for Social Ventures</h3><span class="where">New York, NY · Spring 2026</span></div>
+          <p class="blurb" style="margin-top:2px">Columbia Business School</p>
+          <p class="role">Due Diligence Analyst</p>
+          <ul>
+            <li>Conducted due diligence on a pre-seed AI edtech startup across business model, market, financials, and team; authored the investment memo and presented a funding recommendation to the selection committee, which awarded a $25K grant.</li>
+            <li>Led 3 founder meetings to stress-test the 5-year model, flagging a 2-month Year-3 runway and reliance on converting 6 LOIs into paid contracts; pushed founders to deliver a KPI plan with baselines and an evaluation design.</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <div class="sec-head"><h2>Skills</h2><span class="rule"></span></div>
+      <div class="card">
+        <p class="meta" style="margin-top:0"><strong>Tools &amp; languages</strong></p><br>
+        <span class="chip">Python</span><span class="chip">SQL</span><span class="chip">Tableau</span><span class="chip">Excel</span><span class="chip">PitchBook</span><span class="chip">Capital IQ</span>
+        <p class="meta" style="margin-top:18px"><strong>Financial modeling</strong></p><br>
+        <span class="chip">DCF</span><span class="chip">LBO</span><span class="chip">Cap Table &amp; Liquidation Waterfall</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="sec-head"><h2>Contact</h2><span class="rule"></span></div>
+      <div class="jump">
+        <a href="https://www.linkedin.com/in/wanlin-deng/" target="_blank" rel="noopener"><strong>LinkedIn</strong><small>linkedin.com/in/wanlin-deng</small></a>
+        <a href="https://github.com/wanlindeng" target="_blank" rel="noopener"><strong>GitHub</strong><small>github.com/wanlindeng</small></a>
+        <a href="#top"><strong>New York, NY</strong><small>Open to relocation</small></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Wanlin Deng</span>
+    <a href="#top">Back to top ↑</a>
+  </div>
+</footer>
+
+</body>
+</html>
